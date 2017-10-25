@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React, {PropTypes,  Component } from 'react';
 
-
-var ReactDOM = require('react-dom');
-var Carousel = require('react-responsive-carousel').Carousel;
+import ReactDOM from 'react-dom';
+import { Carousel } from 'react-responsive-carousel';
 
 
 // let cats = [
@@ -53,8 +52,12 @@ export default class MyCarousel extends Component {
 
     render() {
         return (        
-	            <Carousel autoPlay>							
-			
+	            <Carousel 
+								showArrows
+				        infiniteLoop
+				        autoPlay
+				        emulateTouch
+	            >	
 											           
 	                <div>
 	                    <img src="http://lorempixel.com/output/cats-q-c-640-480-1.jpg" />
@@ -97,7 +100,7 @@ export default class MyCarousel extends Component {
            
         );
     }
-}
+};
 
 
 //ReactDOM.render(<MyCarousel />, document.getElementById('carousel-container'));
